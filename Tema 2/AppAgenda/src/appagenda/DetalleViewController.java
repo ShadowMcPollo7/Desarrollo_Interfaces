@@ -176,6 +176,7 @@ public class DetalleViewController implements Initializable {
             entityManager.createNamedQuery("Provincia.findAll");
         List listProvincia = queryProvinciaFindAll.getResultList();
         comboBoxProvincia.setItems(FXCollections.observableList(listProvincia));
+
         //En el caso de que la persona tenga ya asignada una provincia, se mostrará directamente
         if (persona.getProvincia() != null){
             comboBoxProvincia.setValue(persona.getProvincia());
